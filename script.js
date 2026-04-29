@@ -60,3 +60,196 @@ let greeting = "HELLO";
 
 let firstName = "James"
 console.log(greeting, firstName)
+
+
+
+// PRACTICE AREA
+// incrementing numher means adding 1 number to a variable
+
+var myVar = 87;
+
+// incrementing now
+// myVar = myVar + 1;
+// console.log(myVar)
+
+
+// short way of incrememting
+myVar++;
+console.log(myVar)
+// same thing with decrementing just the change of sign to  (-)
+
+// DECIMAL NUMBER IN JS
+// changing decimals
+var ourDecimal = 5.7;
+
+// only change code below this line
+var myDecimal = 0.009;
+console.log(ourDecimal)
+
+
+// multiplying decimals
+
+var product = 2.0 * 2.5;
+console.log(product)
+
+// division of decimal
+
+var qoutient = 4.4 / 2.2;
+console.log(qoutient)
+
+// finding a remainder
+var remainder;
+remainder = 11 % 3;
+console.log(remainder)
+
+// compounding assignment with argumentated subtraction
+// shortcut
+
+var a = 11;
+
+a -= 6;
+
+// var a = 6 -a;
+
+// compounding assignment with argumentated multiplication
+// shortcut
+
+var a = 11;
+
+a *= 6;
+
+// compounding assignment with argumentated division
+// shortcut
+
+var a = 11;
+
+a /= 6;
+
+// escaping literal quotes in a string
+// meaning that when once it sees and ending quotes, it thinks that the end, but you can change that using the backslash called the escacpe character. e.g
+var myStr = "i am a \"double quoted\" struing inside\" double quotes"
+console.log(myStr)
+
+// quoting string  in a single quote e.g
+var mystri = ' a ref is a "baller"'
+console.log(mystri)
+
+// escape sequence in strings
+var myStr = "FirstLine\n\t\\SecondLine\nThirdLine"
+console.log(myStr)
+
+// concatenating string with plus operator
+
+var ourStr = "This is the start. " + "This is the end."
+console.log(ourStr)
+var h1 = "i am douglas"
+console.log(h1) 
+// concatenating string with plus equal operator
+var myStr = "this is the first sentence. "
+myStr += "This is the second sentence." 
+console.log(myStr)
+
+// appending variables to strings
+var anAdjective = "awesome";
+var ourStr = "Douglas is "
+// appending..........
+ourStr += anAdjective 
+console.log(ourStr)
+
+// finding length of a string
+var lastNamelenght = 0;
+var lastName = "douglas"
+lastNamelenght = lastName.length;
+console.log(lastNamelenght)
+
+// INTEGERS AND FLOATS
+
+// Integers are whole number and float are decimal numbers
+/* 
+we have two types of data types in Js
+
+1. Primitive data type
+2. Object data types
+*/
+
+// primitive data type can hold only one value
+let x = 20; 
+console.log(x)
+
+// object data type can hold more than one value and it doesnt use let 
+ x = 20,30;
+console.log(x)
+
+// Symbols are unique and immutable data types that can be used as identifiers for object properties. they are created using the Symbol() function and can be used to create unique keys for objects, ensuring that they do not conflict with other keys. Symbols are often used in scenarios where you want to add properties to an object without risking name collisions with existing properties.
+
+console.log(777 == "777")
+// this is true because it only compares the value and not the data type
+
+console.log(777 === "777")  
+
+// using the greater than and less than operator
+console.log(5 > 3) // true
+console.log(5 < 3) // false
+
+
+// pipe || - or
+// && amper sign - and
+// ! exclamation mark - not
+// BOOLEANS
+// boolean data type can only have two values which are true and false. they are used to compare values and make decisions in code. 
+
+let betNaija = 300;
+let hasAccount = true;
+
+if (betNaija >= 200 && hasAccount == true) {
+    alert("This user can be a customer");
+} else {
+    alert("This user cannot be a customer")
+}
+
+// UNDEFINED
+let andyAge;
+console.log(typeof andyAge)
+
+let bigInt = 1234567890; 
+
+// OBJECTS DATA TYPES
+/* 
+these are data types that can hold more than two or more values. they include:
+1. Arrays
+2. Objects
+
+
+Arrays 
+Arrays are special type of variables used to store more thhan one value []*/
+
+let colors = ["red", "blue", "green", "yellow", "purple"];
+console.log(colors)
+
+
+/* class work 
+1. create an array of numbers and log it to the console
+
+*/
+
+let $num = ["7", "1", "2", "4", "6",]
+console.log($num)
+
+// how to log a particular value to a console. 
+console.log($num[2])
+
+/* Objects 
+objects are used to store collection of data in key-value pairs{}
+
+*/
+const person = {
+    name: "James",
+    age: 120,
+    isMarried: true,
+    height: 6.7,
+    eyeColor: "brown",
+    hobbies: ["playing football", "cooking", "sleeping", "coding"],
+}
+console.log(person)
+
+// operators & conditional statements 
