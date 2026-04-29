@@ -251,5 +251,23 @@ const person = {
     hobbies: ["playing football", "cooking", "sleeping", "coding"],
 }
 console.log(person)
+console.log(person.age)
 
-// operators & conditional statements 
+// create an object of a student named delight 1. log all the key-values to the console, log any key value to the console.
+
+const student = {
+    name: "Delight",
+    age: 19,
+    course: "web dev",
+    street: "ekpeyong",
+    school: "mita",
+    isPunctual: true,
+    hobbies: ["code", "debug", "git init", "command"]
+}
+console.log(student)
+console.log(student.name)
+
+
+/* operators & conditional statements 
+
+*/
