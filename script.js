@@ -269,5 +269,71 @@ console.log(student.name)
 
 
 /* operators & conditional statements 
+operators are special symbols that perform operations on operands (values and variable)
 
+types of operators 
+1. arithemtic operators - are used to perform mathematical operations
+
+2. assignment operators
+3. comparison operators
+4. logical operators
+5. string operators 
 */
+
+// ARITHMETIC OPERATOR 1. SUBSTRACION
+let xi = 12;
+let y = 8;
+let subNum = xi - y;
+console.log(subNum);
+
+let sub = 90 - 70;
+console.log(sub);
+
+// addition
+const add_num = 45 + 8;
+console.log(add_num);
+
+// multiplication
+let multNum = 4 * 9;
+console.log(multNum)
+
+// MODULUS (%) OPERATOR divide numbers and return the remainder 
+
+let div = 44 / 2;
+console.log(div)
+
+let mod = 11 % 3;
+console.log(mod)
+
+let dee = 5 / 9;
+console.log(dee)
+
+// increment (++)
+let incNum = 20;
+incNum++;
+incNum++;
+incNum++;
+incNum++;
+console.log(incNum)
+
+let inc_num = 20;
+function increment() {
+    console.log(inc_num);
+    inc_num++;
+}
+increment();
+increment();
+
+// +=
+let bigNum = 20;
+bigNum += 2;
+console.log(bigNum); 
+
+// decrement - opposite of increment
+let decNum = 20;
+decNum--;
+console.log(decNum);
+
+let pNum = 100;
+pNum -= 50;
+console.log(pNum)
