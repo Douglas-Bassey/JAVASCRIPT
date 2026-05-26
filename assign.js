@@ -1,95 +1,227 @@
-// assignment 1
+// // assignment 1
 
-let samuelisaGraduate = false 
-samuelisaGraduate = true
-console.log(samuelisaGraduate)
+// let samuelisaGraduate = false;
+// samuelisaGraduate = true;
+// console.log(samuelisaGraduate);
 
-let destiny = "student"
-destiny = "tutor"
-console.log(destiny)
+// let destiny = "student";
+// destiny = "tutor";
+// console.log(destiny);
 
-let shakespare = "tutor"
-shakespare = "student"
-console.log(shakespare)
+// let shakespare = "tutor";
+// shakespare = "student";
+// console.log(shakespare);
 
-let valentine = 26
-valentine = 14
-console.log(valentine)
+// let valentine = 26;
+// valentine = 14;
+// console.log(valentine);
 
-let douglasWorth = "Average"
-douglasWorth = "not average but OUTSTANDING"
-console.log(douglasWorth)
+// let douglasWorth = "Average";
+// douglasWorth = "not average but OUTSTANDING";
+// console.log(douglasWorth);
 
-// assignment 2
+// // assignment 2
 
-let studentName = "shakespare"
-let $age = 50
-let favourite_subject = "python"
-let graduate = true
+// let studentName = "shakespare";
+// let $age = 50;
+// let favourite_subject = "python";
+// let graduate = true;
 
-console.log("My name is " + studentName + " i am " + $age + " years old " + " my favourite subject is " + favourite_subject + " i am a graduate " + graduate)
+// console.log(
+//   "My name is " +
+//     studentName +
+//     " i am " +
+//     $age +
+//     " years old " +
+//     " my favourite subject is " +
+//     favourite_subject +
+//     " i am a graduate " +
+//     graduate,
+// );
 
-alert("assignment")
+// alert("assignment");
 
-// Assignment 2
-// 1. An array of 5 of my favourite food
+// // Assignment 2
+// // 1. An array of 5 of my favourite food
 
-let favouriteFood = [
-    "coconut rice with beef and fried plantain",
-    "Banga soup",
-    "Chinese egg fried rice",
-    "Afang soup",
-    "Stew served with any edible that medically good"
-];
-console.log(favouriteFood)
+// let favouriteFood = [
+//   "coconut rice with beef and fried plantain",
+//   "Banga soup",
+//   "Chinese egg fried rice",
+//   "Afang soup",
+//   "Stew served with any edible that is medically good",
+// ];
+// console.log(favouriteFood);
 
-// 2. an object of car with 4 properties 
+// // 2. an object of car with 4 properties
 
-let carProperties = {
-    suv: "engine",
-    cyberTruck: "Tesla",
-    ferrari: "Speed",
-    lambo: "rearmirror view"
-};
-console.log(carProperties)
+// let carProperties = {
+//   suv: "engine",
+//   cyberTruck: "Tesla",
+//   ferrari: "Speed",
+//   lambo: "rearmirror view",
+// };
+// console.log(carProperties);
 
-// 2a. log each to console
-console.log(carProperties.suv);
-console.log(carProperties.cyberTruck);
-console.log(carProperties.ferrari);
-console.log(carProperties.lambo);
+// // 2a. log each to console
+// console.log(carProperties.suv);
+// console.log(carProperties.cyberTruck);
+// console.log(carProperties.ferrari);
+// console.log(carProperties.lambo);
 
-// 3. create 5 variables of different data types
-var first = "Destiny";
-var second = 20;
-var third = true;
-var java;
-var sure = "";
-console.log(first, second, third, java, sure)
+// // 3. create 5 variables of different data types
+// var first = "Destiny";
+// var second = 20;
+// var third = true;
+// var java;
+// var sure = "";
+// console.log(first, second, third, java, sure);
 
-// 4. myName variable and log to console
-const myName = "God's power Douglas Bassey";
-console.log(myName) 
+// // 4. myName variable and log to console
+// const myName = "God's power Douglas Bassey";
+// console.log(myName);
 
-// 5. arithemtic operation on 5 variables
-let f1 = 2 + 2;
-let f2 = 2 * 2;
-let f3 = 2 - 2;
-let f4 = 4 / 2;
-let f5 = 5 % 2;
-console.log(f1, f2, f3, f4, f5)
+// // 5. arithemtic operation on 5 variables
+// let f1 = 2 + 2;
+// let f2 = 2 * 2;
+// let f3 = 2 - 2;
+// let f4 = 4 / 2;
+// let f5 = 5 % 2;
+// console.log(f1, f2, f3, f4, f5);
 
-// 6. variable for score and performing assignment operations
-let score = 10;
-score += 10;
-console.log(score);
-score *= 2;
-console.log(score);
-score -= 20;
-console.log(score);
-score /= 20;
-console.log(score);
-score %= 7;
-console.log(score);
-score **= 2;
-console.log(score)
+// // 6. variable for score and performing assignment operations
+// let score = 10;
+// score += 10;
+// console.log(score);
+// score *= 2;
+// console.log(score);
+// score -= 20;
+// console.log(score);
+// score /= 20;
+// console.log(score);
+// score %= 7;
+// console.log(score);
+// score **= 2;
+// console.log(score);
+
+// ASSIGNMENT
+
+// 1. using switch statement, log the various days  of the week and what you do each day to the console. e.g on monday i go to school, on tuesday i go to church, etc
+
+let daysWeek = "Monday";
+switch (daysWeek) {
+  case "Monday":
+    console.log("Go to work");
+    break;
+
+  case "Tuesday":
+    console.log("Go to School");
+    break;
+
+  case "Wednesday":
+    console.log("Go to Mita School");
+    break;
+
+  case "Thursday":
+    console.log("Learn JS & Shooting");
+    break;
+
+  case "Friday":
+    console.log("automation");
+    break;
+
+  case "Saturday":
+    console.log("Work Out");
+    break;
+
+  case "Sunday":
+    console.log("Go to Church");
+    break;
+
+  default:
+    console.log("Outside these days, you're in the spirit Realm");
+}
+
+/*
+2. using the ternary operator, determine if the following numbers are even or odd:
+a. 45
+b. 80
+*/
+
+// a.
+let numBer = 45;
+let modolusNumber = numBer % 2 === 0 ? "even number" : "Odd number";
+console.log(modolusNumber);
+
+// b.
+let numBer2 = 80;
+let modolusNumber2 = numBer2 % 2 === 0 ? "Even Number" : "Odd Number";
+console.log(modolusNumber2);
+
+/*
+
+3. using if else statement, create a weather app.
+
+create a variable called weather.
+
+"rainy" - "take an umbrella"
+"sunny" - "wear sunglasses"
+cloudy - "expect rain"
+thick fog - wear heavy clothing
+harmattan - wear face mask
+otherwise - "stay safe"
+
+*/
+
+// let weather0 = "rainy";
+// if ((weather0 = "rainy")) {
+//   console.log("Take an Umbrella");
+// } else {
+//   console.log("You can go without umbrella");
+// }
+
+// let weather1 = "sunny";
+// if ((weather1 = "sunny")) {
+//   console.log("Wear sunglasses");
+// } else {
+//   console.log("wear spec....");
+// }
+
+// let weather2 = "cloudy";
+// if ((weather2 = "cloudy")) {
+//   console.log("Expect rain");
+// } else {
+//   console.log("do not expect rain");
+// }
+
+// let weather3 = "thick fog";
+// if ((weather3 = "thick fog")) {
+//   console.log("wear heavy clothing");
+// } else {
+//   console.log("do not wear heavy clothing");
+// }
+
+// let weather4 = "Harmattan";
+// if ((weather4 = "Harmattan")) {
+//   console.log("wear face mask");
+// } else {
+//   console.log("do not wear face mask");
+// }
+
+
+// b. version
+
+let weather = "rainy";
+if (weather == "rainy"){
+    console.log("Take an umbrella")
+}else if (weather == "sunny"){
+    console.log("wear sun glasses")
+}else if (weather == "cloudy"){
+    console.log("expect rain")
+}else if (weather == "thick fog"){
+    console.log("wear heavy clothing")
+}else if (weather == "harmattan"){
+    console.log("wear face mask")
+}else{
+    console.log("stay safe")
+}

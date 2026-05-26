@@ -1,47 +1,41 @@
-
 function testvar() {
-    if (true) {
-        var x = 10;
- 
-    }
-    console.log(x);
-   
+  if (true) {
+    var x = 10;
+  }
+  console.log(x);
 }
 testvar();
 
-function testLetConst(){
-    if (true) {
-        let y = 20;
-        const z = 30;
-         console.log(y,z);
-    }
-   
+function testLetConst() {
+  if (true) {
+    let y = 20;
+    const z = 30;
+    console.log(y, z);
+  }
 }
 
-testLetConst()
+testLetConst();
 
-function testvar(){
-    if (true) {
-        var r = 100;
-    }
-    console.log(r)
-    
+function testvar() {
+  if (true) {
+    var r = 100;
+  }
+  console.log(r);
 }
-testvar()
+testvar();
 
-function testletconst(){
-    if (true) {
-        let u = 200;
-        const e = 700;
-        console.log(u,e)
-    }
-    
+function testletconst() {
+  if (true) {
+    let u = 200;
+    const e = 700;
+    console.log(u, e);
+  }
 }
-testletconst()
+testletconst();
 
 // dynamic typing
 let javaScriptIsFun = true;
-javaScriptIsFun = false
+javaScriptIsFun = false;
 console.log(javaScriptIsFun);
 
 // data types =====
@@ -49,10 +43,10 @@ console.log(javaScriptIsFun);
 
 var jjUdo = "ino";
 jjUdo = "ifot";
-console.log(jjUdo)
+console.log(jjUdo);
 
 //  data type is an attribute of data which tells the compiller or interpreter how the programmer  intend to use the data
-// 
+//
 
 let city = "Uyo";
 console.log(typeof city);
@@ -78,32 +72,186 @@ let myName = "John";
 let carName = "toyota";
 let myAge = 120;
 let isRich = true;
-console.log("My name is" + myName + "I drive a" + carName + "car." + "I am" + myAge + "years old" + "is rich" + isRich)
+console.log(
+  "My name is" +
+    myName +
+    "I drive a" +
+    carName +
+    "car." +
+    "I am" +
+    myAge +
+    "years old" +
+    "is rich" +
+    isRich,
+);
 
 alert("hi");
 
 function testvar() {
-    if (true){
-        var y = "you";
-    }
-    console.log(y)
-    
+  if (true) {
+    var y = "you";
+  }
+  console.log(y);
 }
-testvar()
+testvar();
 
 function testletconst() {
-    if (true){
-        let w = "waka";
-        const c = "commomn"
-        console.log(w,c)
-    }
-    
+  if (true) {
+    let w = "waka";
+    const c = "commomn";
+    console.log(w, c);
+  }
 }
-testletconst()
+testletconst();
 
 let fullName = "Godspower Douglas Bassey";
 fullName = "Douglas Akpan Bassey";
-console.log("My name is " + fullName)
+console.log("My name is " + fullName);
 
-var p = "everule"
-console.log(typeof p)
+var p = "everule";
+console.log(typeof p);
+
+// practice
+
+let age1 = 17;
+let hasID = true;
+console.log(age1 >= 18 && hasID === true);
+
+let bro = true;
+let sis = false;
+console.log(bro == false && sis === true);
+
+let people = 18;
+let eligible = true;
+console.log(people >= 20 && eligible === true);
+
+let boys = true;
+let girls = false;
+console.log(boys || girls);
+
+let b1 = true;
+let b2 = false;
+if (!b1) {
+  console.log("okay na");
+} else {
+  console.log("disappear");
+}
+
+let juve = 18;
+let sure = true;
+console.log(juve >= 18 && sure === true);
+
+let uko2 = "money";
+let goIn = "true";
+if (uko2 && goIn) {
+  console.log("access granted");
+} else {
+  console.log("access denied");
+}
+
+// or
+
+let bread = "true";
+let melon = "false";
+console.log(bread || melon);
+
+let tea = "drink";
+let energyDrink = false;
+if (tea || energyDrink) {
+  console.log("you can take");
+} else {
+  console.log("leave it");
+}
+
+// not
+
+let james = "handsome";
+console.log(!james);
+
+let shakes = "great";
+if (!shakes) {
+  console.log("awesome");
+} else {
+  console.log("olodo");
+}
+
+let kk3 = "hi ";
+let kk2 = "bro";
+let over = kk3 + kk2;
+console.log(over);
+
+let uui = "hi bro ";
+uui += "you are welcome";
+console.log(uui);
+
+// loose equal to ==
+let agenum1 = 18;
+let ageStri2 = "15";
+console.log(agenum1 == ageStri2);
+
+let isLoggedIn = true;
+let loginVa = 1;
+console.log(isLoggedIn == loginVa);
+
+// strict equal to ===
+console.log(6 === "6");
+
+let scoreki = 100;
+let scoretex = "100";
+console.log(scoreki === scoretex);
+
+// !=
+console.log(5 != "5");
+
+let upp = 900;
+let upi = "500";
+console.log(upp != upi);
+
+// !==
+
+console.log(55 !== "54");
+
+let level = 5;
+console.log(level !== 5);
+
+console.log(5 > 4);
+console.log(5 < 4);
+console.log(5 >= 4);
+console.log(5 <= 4);
+
+let okna = 1;
+okna += 3;
+console.log(okna);
+
+let okna1 = 1;
+okna1 -= 3;
+console.log(okna1);
+
+let okna2 = 1;
+okna2 /= 3;
+console.log(okna2);
+
+let okna3 = 1;
+okna3 %= 3;
+console.log(okna3);
+
+let okna4 = 1;
+okna4 *= 3;
+console.log(okna4);
+
+let oooo = 2;
+oooo++;
+oooo++;
+console.log(oooo)
+
+let arree = ["5", "7", "9", "0"]
+console.log(arree[1])
+
+var yyy1 = {
+
+    name:  "god's power",
+    age: "19",
+    skill: "web development",
+    goal: ["God", "World"],
+}
+console.log(yyy1.name);
