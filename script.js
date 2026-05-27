@@ -447,7 +447,7 @@
 // let walletBalance = 20000;
 // console.log(walletBalance >= 1000);
 
-// /* logical operators 
+// /* logical operators
 // logical operators are used to combine multiple boolean expressions. They are used in decision making.
 // 1. && (logical AND) - returns true if both operands are true
 // 2. || (Logical OR) - returns true if at least one of the operands is true
@@ -504,7 +504,7 @@
 //   console.log("Your account is banned");
 // }
 
-// /* 
+// /*
 // STRING OPERATIONS - CONCATENATION
 
 // String concatenation is the process of combining two or more strings together using the + operator
@@ -532,7 +532,7 @@
 // // let myAge = "1000"
 // // console.log("My name is " + myName + " and i am " + myAge + " years old")
 
-// /* 
+// /*
 // conditional statements
 
 // conditional statements are used to perrfdorom different actions based on different conditions
@@ -571,12 +571,12 @@
 //   console.log("Grade: F - Try again next semester");
 // }
 
-// /* 
+// /*
 // SWITCH STATEMENT
 
 // the swtich statement is used to perform different actionns based on different conditions. it is an alternative to using multiple if ... else statements when you have many conditions to check.
 
-// a switch statements checks one value and compares it against many possible cases. 
+// a switch statements checks one value and compares it against many possible cases.
 
 // */
 
@@ -621,8 +621,8 @@
 //     console.log("You are not welcome");
 // }
 
-// /* 
-// TERNARY operator 
+// /*
+// TERNARY operator
 // a shorter version of if...else
 // */
 
@@ -672,40 +672,177 @@ TYPES OF FUNCTIONS
 2. Arrow funtion - const name = ()=>{}
 
 */
-// Formal funcitons 
-function greet() {
-  console.log("Hello, World")
-}
-greet(); // calling or invoking a function
+// Formal funcitons
+// function greet() {
+//   console.log("Hello, World")
+// }
+// greet(); // calling or invoking a function
 
 // function declaration
 // a function declaration is a way to define a named function in javascript using the function keyword. it's one of the fundamnetal ways to create reusable blocks of code.
 
-function sayHello() {
-  console.log("Hello, welcoome to javascript class!");
-} sayHello
+// function sayHello() {
+//   console.log("Hello, welcoome to javascript class!");
+// } sayHello
 
-// function hoisting - calling a function before declaring it
-sayHi()
+// // function hoisting - calling a function before declaring it
+// sayHi()
 
-function sayHi() {
-  console.log("Hi")
-}
+// function sayHi() {
+//   console.log("Hi")
+// }
 
-// Function Expression
-// anytime we get a variable and set it equal to someting, whether it's a function or string or somwthing else, that is knowm as expression.
+// // Function Expression
+// // anytime we get a variable and set it equal to someting, whether it's a function or string or somwthing else, that is knowm as expression.
 
-const name = "Douglas" // variable expression
+// const name = "Douglas" // variable expression
 
-const speak = function () {
-  console.log("Good day!");
+// const speak = function () {
+//   console.log("Good day!");
+// };
+// speak();
+
+// /* parameters and arguments
+
+// parameters = placeholders
+// arguments = actual values
+
+// */
+
+// function add(a,b){
+//   return a + b;
+// }console.log(add(5,8));
+
+// // function add(a,b) {
+// //   console.log(a + b)
+// // }
+// // add(5,8);
+
+// function plusNum(x,y) {
+//   return x + y;
+// }console.log(plusNum(8,10));
+
+// // Default parameters
+// function greet(name = "Guest") {
+//   console.log(`Hello ${name}`);
+// }
+// greet();
+
+// greet("destiny")
+
+// /*
+// NOTE: return statement sends a value back
+//       codes after return do not work */
+
+// function multiply(a, b) {
+//   return a * b;
+// }
+// console.log(multiply(5, 5));
+
+// // call back function
+// // is a function that is passed into another function to run later
+
+// setTimeout(() => {
+//   console.log("Hello!!");
+// }, 1000);
+
+// /*
+// CLASSWORK
+
+// Write a function that checks if a number is even
+// */
+
+// function evenNum (number) {
+//   return number % 2 === 0;
+// }console.log(evenNum(4 % 2))
+
+//  ARROW FUNCTIONS
+// 1. simple arrow function
+const sayHi = () => console.log("Hi!");
+sayHi();
+
+// 2. arrow function with parameter
+const greet = (name = "stanley") => console.log("Hello" + " " + name);
+
+greet();
+
+// 3. arrow function that adds number
+const addNums = (x, y) => x + y;
+console.log(addNums(7.9, 12.0));
+
+// 4. arrow function with multiple lines
+const getGrade = (score) => {
+  if (score >= 70) return "A";
+  else if (score >= 50) return "B";
+  else return "F";
 };
-speak();
+console.log(getGrade(60));
 
+// 5. arrow function inside an array
+const numberz = [1, 2, 3, 4];
+const values = [6, 8, 9, 5];
+const squares = [values.map((double) => double * double)];
+console.log(squares);
 
-/* parameters and arguments
+// outer and inner function
+// An inner function is a function declared inside another function
 
-parameters = placeholders 
-arguments = actual values 
+function outerFunction() {
+  console.log("i am the outer function");
 
+  function innerFunction() {
+    console.log("i am the inner function");
+  }
+  innerFunction();
+}
+outerFunction();
+
+// inner function accessing outer variables
+
+function outerFunction1() {
+  let username = "Stanley";
+
+  function innerFunction1() {
+    console.log("Hello " + username);
+  }
+  innerFunction1();
+}
+outerFunction1();
+/*
+inner function can access:
+1. their own variables
+2. outer function variables
+3. global  variables
 */
+
+/* 
+
+FUNCTION SCOPE
+
+scope answers one question:
+"where can this variable be used?"
+in JS functions create their own scope.
+*/
+
+let globalVar = "I am global";
+
+function testScope() {
+  let localVar = "I am local";
+  console.log(globalVar);
+  console.log(localVar);
+}
+testScope();
+console.log(globalVar);
+
+// scope with inner and outer function
+function parent() {
+  let parentMoney = 1000;
+
+  function child() {
+    let childMoney = 200;
+    console.log(parentMoney);
+    console.log(childMoney);
+  }
+  child();
+}
+parent();
