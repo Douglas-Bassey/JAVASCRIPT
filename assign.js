@@ -225,3 +225,70 @@ if (weather == "rainy"){
 }else{
     console.log("stay safe")
 }
+
+
+/*
+ASSIGNMENT 
+
+1. inner and outer function
+write a function called createMessage.
+
+Requirements;
+
+Inside it, declare a variable called name and assign it your own name. 
+
+inside createMessage, write another function called displayMessage 
+
+displayMessage should log:
+hello, My name is _____
+call the inner function inside the outer function.
+
+*/
+function createMessage() {
+  let myName = "Douglas Bassey";
+
+  function displayMessage() {
+    console.log("Hello, My name is" + " " + myName);
+  }
+  displayMessage();
+}
+createMessage();
+/*
+2.  CLOSURES
+
+create a function called counter
+
+requirements:
+inside it, declare a variable count and set it to 0.
+Return an inner function.
+
+each time the returned function is called, iot should;
+increase count by 1
+
+log the new value 
+
+example usage;
+const myCounter = counter();
+myCounter(); // logs 1
+myCounter(); // logs 2
+myCounter(); // logs 3
+
+*/
+
+function counter() {
+  let count = 0;
+
+  function letsCount() {
+    count++;
+    console.log(count);
+  }
+  return letsCount;
+}
+
+const myCounter = counter();
+myCounter();
+myCounter();
+myCounter();
+myCounter();
+myCounter();
+myCounter();

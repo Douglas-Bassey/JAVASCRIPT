@@ -846,3 +846,25 @@ function parent() {
   child();
 }
 parent();
+
+/*
+CLOSURES
+
+a closure happens when;
+An inner function remembers and continues to access variables from its outer function even after the outer function has finished running.
+*/
+
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+  return inner;
+}
+
+const counter = outer();
+counter();
+counter();
+counter();
