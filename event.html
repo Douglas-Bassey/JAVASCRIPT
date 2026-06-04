@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    button {
+      width: 150px;
+      background-color: red;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+    }
+    h4 {
+      background-color: blue;
+      width: 200px;
+      padding: 20px;
+      color: white;
+      border-radius: 20px;
+    }
+
+    .container {
+      background-color: blue;
+      border-radius: 20px;
+      padding: 10px;
+      width: 80%;
+      margin: auto;
+    }
+
+    #JSBtn {
+      background-color: blue;
+      width: 100%;
+    }
+    #JSBtn:hover{
+        background-color: rgba(255, 255, 255, 0.185);
+    }
+
+    #tag {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+
+    #box{
+      width: 200px;
+      height: 100px;
+      padding: 16px;
+      background-color: rgba(255, 0, 0, 0.849);
+      color: white;
+      border-radius: 20px;
+      border:  3px dotted blue;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 30px;
+      margin: auto;
+    }
+    h3{
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+
+  <body>
+    <h1>HTML EVENT</h1>
+
+    <!-- example one -->
+    <button onclick="document.getElementById('demo').innerHTML = Date()">
+      This Time is?
+    </button>
+
+    <p id="demo"></p>
+
+    <!-- example 2 -->
+
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+
+    <!-- example 3 -->
+
+    <!-- <h4 id="highlight">click the button</h4>
+<button onclick="displayDate()">
+    the time is?
+</button>c
+
+<p id="demo1"></p> -->
+
+    <!-- example 4 -->
+    <button id="myBtn">Time is?</button>
+    <p id="demo2"></p>
+
+    <h1>CLASSWORK - DESTINY</h1>
+
+    <div class="container">
+      <button id="JSBtn">Language</button>
+
+      <h2 id="tag">hi</h2>
+    </div>
+
+
+
+    <!-- mouse events  -->
+
+    <h3>The mouseover and mouseout events</h3>
+    <div id="box" >
+
+      MOVE MOUSE ON THIS BOX
+    </div>
+
+    <!-- MOUSE DOUBLE CLICK -->
+
+    <h2>Double-click Events</h2>
+    <button id="myBTN">
+      Double click me
+    </button>
+
+    <p id="message"></p>
+
+
+    <!-- MOUSE MOVE EVENTS -->
+     <h4>
+      Mouse Move
+     </h4>
+
+     <div id="tracker">
+      Mouse move over here
+     </div>
+
+     <p id="coordinates"></p>
+
+
+     <!-- MOUSE DOWN / MOUSE UP-->
+      
+     
+    <script src="event.js"></script>
+  </body>
+</html>

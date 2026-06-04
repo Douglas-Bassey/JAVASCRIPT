@@ -444,17 +444,22 @@
 // let passMark = 60;
 // console.log(examScore >= passMark);
 
-// let walletBalance = 20000;
+// let walletBalance = 20000; 
 // console.log(walletBalance >= 1000);
 
-// /* logical operators
-// logical operators are used to combine multiple boolean expressions. They are used in decision making.
-// 1. && (logical AND) - returns true if both operands are true
-// 2. || (Logical OR) - returns true if at least one of the operands is true
-// 3. ! (Logical NOT) - negates the boolean value of an operand
-// */
 
-// // 1. && - logical AND
+
+
+
+/* logical operators
+logical operators are used to combine multiple boolean expressions. They are used in decision making.
+1. && (logical AND) - returns true if both operands are true
+2. || (Logical OR) - returns true if at least one of the operands is true
+3. ! (Logical NOT) - negates the boolean value of an operand
+*/
+
+
+// // 1. && - logical AND 
 // let age1 = 17;
 // let hasID = true;
 // console.log(age1 >= 18 && hasID === true);
@@ -469,6 +474,8 @@
 // } else {
 //   console.log("please login and complete payment");
 // }
+
+
 
 // // 2. || - logical OR
 // // a.
@@ -487,6 +494,8 @@
 // } else {
 //   console.log("No Payment Method Available");
 // }
+
+
 
 // // 3. ! logical NOT
 // // a.
@@ -532,10 +541,13 @@
 // // let myAge = "1000"
 // // console.log("My name is " + myName + " and i am " + myAge + " years old")
 
+
+
 // /*
 // conditional statements
 
-// conditional statements are used to perrfdorom different actions based on different conditions
+// conditional statements are used to peform different actions based on different conditions
+
 // The main conditonal statements in JS are:
 // 1. if statement
 // i. if else statement
@@ -551,6 +563,11 @@
 // //   // code to be excuted
 // // }
 
+// let val = 14;
+// if (val = 14) {
+//   console.log("happy val day")
+// }
+
 // let myAge = 15;
 // if (myAge >= 18) {
 //   console.log("I am an Adult");
@@ -561,7 +578,7 @@
 // // multiple if statement
 
 // let score1 = 80;
-// if (score1 >= 70) {
+// if (score1 >= 79) {
 //   console.log("Grade : A - Excellent result");
 // } else if (score1 >= 50) {
 //   console.log("Grade: B - Good job");
@@ -628,7 +645,7 @@
 
 // let herAge = 25;
 // let hmessage = herAge >= 18 ? "Adult" : "Minor";
-// console.log(hmessage);
+// console.log(hmessage); 
 
 // let isloggedIn = false;
 // let loginStatus = isloggedIn ? "welcome!" : "PLEASE log in";
@@ -659,9 +676,11 @@ make it 5
 
 */
 /* 
+
 FUNCTIONS
 
-A function is a reusable blockof code tha performs a specific task. it is a fundamental building block in programming that allows us to break down complex problemt into smaller, more manageable pieces. Functions can take inputs (parameters) and return outputs (results). 
+A function is a reusable block of code tha performs a specific task. it is a fundamental building block in programming that allows us to break down complex problemt into smaller, more manageable pieces. Functions can take inputs (parameters) and return outputs (results). 
+
 They help to improve code organization, readibility and maintainability  by allowing us to encapsulate logic and reuse it throughout our programs. Functions can  be defifned using the function keyword or as arrow functions in Javascript.
 
 NOTE: functions cannot work except it is been called i.e "invokation"
@@ -851,7 +870,8 @@ parent();
 CLOSURES
 
 a closure happens when;
-An inner function remembers and continues to access variables from its outer function even after the outer function has finished running.
+An inner function remembers and continues to access variables
+ from its outer function even after the outer function has finished running.
 */
 
 function outer() {
@@ -868,3 +888,4 @@ const counter = outer();
 counter();
 counter();
 counter();
+
