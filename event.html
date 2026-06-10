@@ -32,6 +32,11 @@
       margin: auto;
     }
 
+    #clock{
+       font-size: 20px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       color: navy;
+    }
     #JSBtn {
       background-color: blue;
       width: 100%;
@@ -66,10 +71,21 @@
       text-align: center;
       padding: 10px;
     }
+
+    #pressArea{
+      padding: 20px;
+      border: 3px solid black;
+    }
+
+
+    #rightClickArea{
+      padding: 20px;
+      border: 2px solid orangered;
+    }
   </style>
 
   <body>
-    <h1>HTML EVENT</h1>
+    <!-- <h1>HTML EVENT</h1>
 
     <!-- example one -->
     <button onclick="document.getElementById('demo').innerHTML = Date()">
@@ -136,8 +152,61 @@
 
 
      <!-- MOUSE DOWN / MOUSE UP-->
-      
-     
+      <h2>Mousedown / mouseup events (press and release)</h2>
+     <div id="pressArea">
+      click and hold here
+     </div>
+     <p id="status">Mouse Status: up</p>
+
+     <!-- mouse enter and mouse leave -->
+     <h2>mouse enter / mouse leave events</h2>
+
+     <div id="hoverBox">
+      hover over me
+     </div>
+
+     <p id="hoverStatus">
+      outside the box
+     </p>
+
+
+     <h2>Context Menu</h2>
+     <div id="rightClickArea">
+      Right-click here
+     </div>
+
+
+     <!-- keyboard events -->
+
+     <h2>The Keydown Events</h2>
+
+     <input type="text" id="k" placeholder = "Press a key here">
+
+     <p id="demi"></p> 
+
+
+     <!-- TIMING EVENTS -->
+
+     <!-- CLOCK -->
+
+     <h2>The setInterval() method</h2>
+
+     <p id="clock"></p>
+
+
+     <!-- set timeout method -->
+      <h2>The setTimeout () Method</h2>
+
+      <button id="btnTime">START</button>
+
+      <p id="demor">Wait</p>
+
+      <!-- setinterval 2 -->
+
+      <button id="start">START</button>
+      <button id="Stop">STOP</button>
+
+      <p id="counter">0</p>
     <script src="event.js"></script>
   </body>
 </html>

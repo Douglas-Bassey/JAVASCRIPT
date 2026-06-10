@@ -208,24 +208,22 @@ otherwise - "stay safe"
 //   console.log("do not wear face mask");
 // }
 
-
 // b. version
 
 let weather = "rainy";
-if (weather == "rainy"){
-    console.log("Take an umbrella")
-}else if (weather == "sunny"){
-    console.log("wear sun glasses")
-}else if (weather == "cloudy"){
-    console.log("expect rain")
-}else if (weather == "thick fog"){
-    console.log("wear heavy clothing")
-}else if (weather == "harmattan"){
-    console.log("wear face mask")
-}else{
-    console.log("stay safe")
+if (weather == "rainy") {
+  console.log("Take an umbrella");
+} else if (weather == "sunny") {
+  console.log("wear sun glasses");
+} else if (weather == "cloudy") {
+  console.log("expect rain");
+} else if (weather == "thick fog") {
+  console.log("wear heavy clothing");
+} else if (weather == "harmattan") {
+  console.log("wear face mask");
+} else {
+  console.log("stay safe");
 }
-
 
 /*
 ASSIGNMENT 
@@ -292,3 +290,64 @@ myCounter();
 myCounter();
 myCounter();
 myCounter();
+
+// ===Assignment // 1. Build a clock showing time in 12hours - AM and PM
+
+//2. create a html element that should respond to the different various events listed below:
+// double-click
+// mouseover/mouseout
+
+//3. Build a stop watch with start, stop and reset buttons. The stopwatch should display the elapsed time in seconds and milliseconds. Use setInterval() to update the display every 10 milliseconds. Implement the functionality for each button as follows:
+
+/* Start Button: When clicked, the stopwatch should start counting time from 0. If the stopwatch is already running, clicking the start button should have no effect. Stop Button: When clicked, the stopwatch should stop counting time. If the stopwatch is already stopped, clicking the stop button should have no effect. 
+ 
+ Pause Button: When clicked, the stopwatch should pause the counting of time. If the stopwatch is already paused, clicking the pause button should have no effect. 
+ 
+ 
+  Reset Button: When clicked, the stopwatch should reset the elapsed time to 0 and stop counting if it is currently running. */
+
+function updateClock() {
+  const now = new Date();
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  let period = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+
+  document.getElementById("clock").textContent =
+    `${hours}:${minutes}:${seconds} ${period}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+// 2
+
+function updateClock() {
+  const now = new Date();
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  let period = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+
+  document.getElementById("clock").textContent =
+    `${hours}:${minutes}:${seconds} ${period}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
