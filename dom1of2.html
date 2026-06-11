@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+      #container {
+        width: 500px;
+        height: 400px;
+        position: relative;
+        background-color: rgba(255, 255, 0, 0.637);
+      }
+
+      #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: cyan;
+      }
+    </style>
+<body>
+    
+<!--    DOM SELECTORS -->
+
+    <!-- getElementById example -->
+
+    <!-- <p><button onclick="myMove()">Click me</button></p>
+
+    <div id="container">
+      <div id="animate"></div>
+    </div>
+
+    <script>
+      function myMove() {
+        let id = null;
+        const animate = document.getElementById("animate");
+        let position = 0;
+        // clearInterval(id);
+        id = setInterval(frame, 5);
+
+        function frame() {
+          if (position == 350) {
+            // clearInterval();
+          } else {
+            position++;
+            animate.style.top = position + "px";
+            animate.style.left = position + "px";
+          }
+        }
+      }
+    </script>  -->
+
+    <!-- getElementsByClassName example --> 
+
+     <h2>get element by class name</h2>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <button id="colorBtn">Change all boxes</button>
+
+    <script>
+        document.getElementById("colorBtn")
+        .addEventListener("click", function() {
+            const boxes = document.getElementsByClassName("box");
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].style.backgroundColor = "lightcoral";
+                boxes[i].style.color = "white";
+            }
+        });
+    </script>
+
+    <!-- getElementByTagName example -->
+
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Get element by tagname</h2>
+
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <p>paragraph 3</p>
+
+    <button id="styleBtn">style all paragraphs</button>
+
+    <script>
+      document
+        .getElementById("styleBtn")
+        .addEventListener("click", function () {
+          const paragraphs = document.getElementsByTagName("p");
+          for (let para of paragraphs) {
+            para.classList.add("highlight");
+            para.style.backgroundColor = "yellow"
+          }
+          paragraphs[0].style.color = "red";
+          paragraphs[1].style.color = "seagreen";
+            paragraphs[2].style.color = "blue";
+        });
+    </script>
+
+    <!-- Query selector example -->
+    
+    <!-- <h3>products</h3>
+
+    <div id="card">Rice</div>
+    <div id="card">Beans</div>
+    <div id="card">Palm oil</div>
+    <div id="card">Yam</div>
+
+    <button id="highlightBtn">Highlight</button>
+
+    <script>
+      const button = document.querySelector("#highlightBtn");
+      const card = document.querySelector("#card");
+
+      button.addEventListener( "click", function () {
+        card.style.backgroundColor = "yellow";
+        card.style.fontWeight = "bold";
+        card.style.color = "red";
+      });
+    </script> -->
+
+    <!-- Query selector all -->
+
+     <h2>Query selector All</h2>
+
+    <div class="card">JavaScript</div>
+    <div class="card">React</div>
+    <div class="card">Laravel</div>
+    <div class="card">Python</div>
+
+    <button id="activateBtn">Activate courses</button>
+
+    <script>
+        const cards = document.querySelectorAll(".card");
+        const button = document.querySelector("#activateBtn");
+
+        button.addEventListener("click" , function(){
+            for (let card of cards) {
+                card.classList.add("active");
+                
+            }
+        })
+
+        
+    </script> 
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h2>Create Account</h2>
+
+        <form id="registerForm">
+            <!-- name input -->
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Full Name">
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <!-- email input -->
+             <div class="input-group">
+                <input type="email" id="email" placeholder="email@ymail.com">
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <!-- phone input -->
+              <div class="input-group">
+                <input type="text" id="phone" placeholder="+234701111111">
+                <div class="error" id="phoneError"></div>
+            </div>
+
+            <!-- password input -->
+              <div class="input-group">
+                <input type="password" id="password" placeholder="****">
+                <button type="button" class="toggle-btn" data-target="password">
+                    show
+                </button>
+                <div class="strength" id="strengthBar"></div>
+                <div class="error" id="passwordError"></div>
+            </div>
+
+
+            <!-- confirm password -->
+              <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Paaword">
+                <button type="button" class="toggle-btn" data-target="confirmPassword">
+                Show
+                </button>
+                <div class="error" id="confirmError"></div>
+            </div>
+
+            <!-- check box -->
+              <div class="input-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms</label>
+                <div class="error" id="termsError"></div>
+            </div>
+
+            <!-- register button -->
+             <br>
+             <button type="submit" class="submit-btn">Register</button>
+        </form>
+
+
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
