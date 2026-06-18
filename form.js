@@ -12,10 +12,11 @@ const nameRegex = /^[A-Za-z]{3,}$/;
 const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
 const phoneRegex = /^[0-9]{10,15}$/;
 
+// error handling
 function showError(input, message, errorId) {
   input.classList.add("invalid");
   input.classList.remove("success");
-  const error = document.getElementById("errorId");
+  const error = document.getElementById(errorId);
   error.style.display = "block";
   error.textContent = message;
 }
@@ -62,17 +63,17 @@ function validatePassword() {
   let strength = 0;
 
   if (value.length >= 8) strength++;
-  if (/[A-Z]/.text(value)) strength++;
+  if (/[A-Z]/.test(value)) strength++;
   if (/[a-z]/.test(value)) strength++;
   if (/[0-9]/.test(value)) strength++;
   if (/[^A-Za-z0-9]/.test(value)) strength++;
 
   const colors = ["red", "orange", "yellow", "lightgreen", "green"];
-  strengthBar.style.width = strenght * 20 + "%";
-  strengthBar.style.background = Colors[strength - 1] || "red";
+  strengthBar.style.width = "strength * 20 + %";
+  strengthBar.style.background = colors[strength - 1] || "red";
 
   if (strength < 4) {
-    showError(passwordInput, "poassword too weak");
+    showError(passwordInput, "password too weak");
     return false;
   }
   showSuccess(passwordInput, "passwordError");
@@ -101,7 +102,7 @@ function validateTerms() {
 }
 
 // real time validation
-nameInput.addEventListener("input", validateName);
+nameInput.addEventListener("input", validateName); 
 emailInput.addEventListener("input", validateEmail);
 phoneInput.addEventListener("input", validatePhone);
 passwordInput.addEventListener("input", validatePassword);
@@ -122,13 +123,21 @@ document.querySelectorAll(".toggle-btn").forEach((btn) => {
 });
 
 // handling submit
-form.addEventListener("submit", function(e){
-    e.preventDefault()
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const isValid = 
+  const isValid =
     validateName() &&
-     validateEmail() &&
-      validatePhone() &&
-       validatePassword() &&
-        validateConfirm() &&
-})
+    validateEmail() &&
+    validatePhone() &&
+    validatePassword() &&
+    validateConfirm() &&
+    validateTerms();
+
+  if (isValid) {
+    alert("Registration Successful");
+    form.reset();
+    strengthBar.style.width = "0";
+  }
+});
+
