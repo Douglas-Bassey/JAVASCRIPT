@@ -12,7 +12,22 @@ body {
   background-size: 100% 100vh;
 }
 
+.theme {
+  margin: auto;
+  align-items: center;
+  position: absolute;
+  left: 600px;
+}
+#themeBtn {
+  background-color: white;
+  width: 150px;
+  padding: 10px;
+  border-radius: 40px;
+  border-left: none;
+  border-right: none;
+}
 .container {
+  /* display: none; */
   background: #000000be;
   width: 100%;
   max-width: 420px;
@@ -24,7 +39,7 @@ body {
   top: 80px;
   transition: 0.3s ease;
 }
- h2 {
+h2 {
   text-align: center;
   margin-bottom: 25px;
   color: rgb(255, 0, 0);
@@ -70,64 +85,75 @@ img {
   width: 100px;
 }
 
-
-a{
-    color: white;
-    position: relative;
-    top: 8px;
+a {
+  color: white;
+  position: relative;
+  top: 8px;
 }
-a:active{
-    color: red;
+a:active {
+  color: red;
 }
 
- input:focus {
-        border-color: #2c5364;
-      }
+input:focus {
+  border-color: #2c5364;
+}
 
-      .toggle-btn {
-        position: absolute;
-        left: 170px;
-        top: 40%;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 12px;
-        color: #ff0000;
-      }
+.toggle-btn {
+  position: absolute;
+  left: 160px;
+  top: 35%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #ff0000;
+}
 
-      .toggle-btn:hover {
-        color: #000;
-      }
+.toggle-btn:hover {
+  color: #000;
+}
 
-      .error {
-        color: red;
-        font-size: 12px;
-        margin-top: 5px;
-        display: none;
-      }
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
 
-      .success {
-        border-color: green !important;
-      }
+.success {
+  border-color: green !important;
+}
 
-      .invalid {
-        border-color: red !important;
-      }
+.invalid {
+  border-color: red !important;
+}
 
-      .strength {
-        height: 5px;
-        margin-top: 6px;
-        border-radius: 3px;
-        transition: 0.3s;
-      }
+.strength {
+  height: 5px;
+  margin-top: 6px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
 
-      button.submit-btn:hover {
-        background: #432020;
-        color: white;
-      }
+button.submit-btn:hover {
+  background: #432020;
+  color: white;
+}
 
-      @media (min-width: 768px) {
-        .container {
-          padding: 40px;
-        }
-      }
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+.dark h2,
+.dark h3,
+.dark p {
+  color: rgb(255, 254, 254);
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+

@@ -68,6 +68,7 @@
 // // myVar = myVar + 1;
 // // console.log(myVar)
 
+
 // // short way of incrememting
 // myVar++;
 // console.log(myVar);
@@ -888,4 +889,6 @@ const counter = outer();
 counter();
 counter();
 counter();
+
+// assignment
 

@@ -1,3 +1,4 @@
+const theme = document.getElementById("themeBtn");
 const form = document.getElementById("formlogin");
 
 const email = document.getElementById("email");
@@ -5,8 +6,10 @@ const name = document.getElementById("name");
 const password = document.getElementById("password");
 const strengthBar = document.getElementById("strengthBar");
 
+let darkMode = false;
+
 const nameRegex = /^[A-Za-z]{3,}$/;
-const emailRegex = /^[^ ]+@[^ ]\.[a-z]{2,}$/;
+const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
 // const passwordRegex = /^[0-9]{8,14}$/;
 
 // error handling
@@ -56,14 +59,14 @@ function validatePassword() {
   if (/[A-Z]/.test(value)) strength++;
   if (/[a-z]/.test(value)) strength++;
   if (/[0-9]/.test(value)) strength++;
-  if (/^[A-Za-z0-9]/.test(value)) strength++;
+  if (/[^A-Za-z0-9]/.test(value)) strength++;
 
   const colors = ["red", "orange", "yellow", "lightgreen", "green"];
-  strengthBar.style.width = "strength * 20 + %";
+  strengthBar.style.width = strength * 20 + "%";
   strengthBar.style.background = colors[strength - 1] || "red";
 
   if (strength < 4) {
-    showError(password, "password is too weak");
+    showError(password, "password is too weak", "passwordError");
     return false;
   }
   showSuccess(password, "passwordError");
@@ -72,7 +75,7 @@ function validatePassword() {
 
 // real time validation
 
-name.addEventlistner("input", validateName);
+name.addEventListener("input", validateName);
 email.addEventListener("input", validateEmail);
 password.addEventListener("input", validatePassword);
 
@@ -94,14 +97,25 @@ document.querySelectorAll(".toggle-btn").forEach((btn) => {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const isValid = 
-  validateName() && 
-  validateEmail() && 
-  validatePassword();
+  const isValid = validateName() && validateEmail() && validatePassword();
 
   if (isValid) {
     alert("Welcome to your Dashboard");
     form.reset();
-    strengthBar.style.width = "0";
+    strengthBar.style.width = "0%";
   }
 });
+
+// theme
+theme.addEventListener("click", function () {
+  if (darkMode === false) {
+    document.body.classList.add("dark");
+    document.textContent = "Light Mode";
+    darkMode = true;
+  } else {
+    document.body.classList.remove("dark");
+    document.textContent = "Dark Mode";
+    darkMode = false;
+  }
+});
+

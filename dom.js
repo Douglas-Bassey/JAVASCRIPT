@@ -1,33 +1,27 @@
-// const addBtn = document.querySelector("#addItem");
+const addBtn = document.querySelector("#addItem");
 
-// const removeBtn = document.getElementById("removeItem");
+const removeBtn = document.getElementById("removeItem");
 
-// const box = document.getElementById("box");
+const box = document.getElementById("box");
 
-// let message;
+let message;
 
-// addBtn.addEventListener("click", function () {
-//   message = document.createElement("p");
-//   message.textContent = "Hello, welcome to JS Class";
-//   box.appendChild(message);
-//   message.style.color = "blue"
-//    message.style.fontSize = "20px";
-//     message.style.fontFamily = "tahoma";
-// });
+addBtn.addEventListener("click", function () {
+  message = document.createElement("p");
+  message.textContent = "Hello, welcome to JS Class";
+  box.appendChild(message);
+  message.style.color = "blue";
+  message.style.fontSize = "20px";
+  message.style.fontFamily = "tahoma";
+});
 
-// removeBtn.addEventListener("click", () => {
-//   if (box.lastElementChild) {
-//     box.lastChild.remove();
-//   }
-// });
+removeBtn.addEventListener("click", () => {
+  if (box.lastElementChild) {
+    box.lastChild.remove();
+  }
+});
 
-/*
-
-Manipulating HTML & CSS WITH JAVASCRIPT
-
-
-
-*/
+// Manipulating HTML & CSS WITH JAVASCRIPT
 
 const loadBtn = document.getElementById("loadBtn");
 const themeBtn = document.getElementById("themeBtn");
@@ -51,32 +45,31 @@ loadBtn.addEventListener("click", function () {
     loader.classList.add("hidden");
 
     textName.textContent = "James";
-    roleText.textContent = "web developer"
+    roleText.textContent = "web developer";
 
-    profileImg.src = "https://i.pravatar.cc/100"
-    profileImg.alt = "Mr. James"
+    profileImg.src = "https://i.pravatar.cc/100";
+    profileImg.alt = "Mr. James";
 
-    card.style.backgroundColor = "#d1ffe3"
-    card.style.border = "2px solid green"
+    card.style.backgroundColor = "#d1ffe3";
+    card.style.border = "2px solid green";
 
-    card.classList.remove("hidden")
+    card.classList.remove("hidden");
 
-    title.textContent = "profile loaded successfully!"
-    title.style.color = "green"
+    title.textContent = "profile loaded successfully!";
+    title.style.color = "green";
   }, 2000);
 });
 
 
 // theme toggle
-themeBtn.addEventListener("click", function() {
-    if (darkMode === false){
-        document.body.classList.add("dark")
-        document.textContent = "switch to Light Mode"
-        darkMode = true
-    }
-    else {
-        document.body.classList.remove("dark")
-        themeBtn.textContent = "Toggle Dark  mode"
-        darkMode = false
-    }
-})
+themeBtn.addEventListener("click", function () {
+  if (darkMode === false) {
+    document.body.classList.add("dark");
+    document.textContent = "switch to Light Mode";
+    darkMode = true;
+  } else {
+    document.body.classList.remove("dark");
+    themeBtn.textContent = "Toggle Dark  mode";
+    darkMode = false;
+  }
+});

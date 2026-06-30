@@ -351,3 +351,102 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+// assignment befor react.
+console.log("Assignment before react");
+// ============ Assignment ============
+
+// ====================
+// TASK 1
+// ====================
+
+let scores = [35, 45, 67, 80, 59, 90, 72, 30];
+
+let result = scores.map(function(score) {
+  if (score >= 60) {
+    return "Pass";
+  } else {
+    return "Fail";
+  }
+});
+
+console.log(result);
+
+
+
+// ====================
+// TASK 2
+// ====================
+
+let result2 = scores.map(function(score) {
+  if (score >= 60) {
+    return score + " - Pass";
+  } else {
+    return score + " - Fail";
+  }
+});
+
+console.log(result2);
+
+
+
+// ====================
+// TASK 3
+// ====================
+
+let students = [
+  { name: "Ebuka", score: 88 },
+  { name: "Mary", score: 45 },
+  { name: "John", score: 70 },
+  { name: "Grace", score: 55 },
+  { name: "David", score: 90 }
+];
+
+let studentResult = students.map(function(student) {
+  return {
+    name: student.name,
+    score: student.score,
+    status: student.score >= 60 ? "Pass" : "Fail"
+  };
+});
+
+console.log(studentResult);
+
+
+
+// ====================
+// FILTER METHOD
+// ====================
+
+let orders = [
+  { id: 1, product: "Laptop", price: 1200, delivered: true },
+  { id: 2, product: "Phone", price: 800, delivered: false },
+  { id: 3, product: "Headphones", price: 150, delivered: true },
+  { id: 4, product: "Monitor", price: 300, delivered: false },
+  { id: 5, product: "Keyboard", price: 100, delivered: true }
+];
+
+// Get all orders that have not been delivered
+
+let pendingOrders = orders.filter(function(order) {
+  return order.delivered === false;
+});
+
+console.log(pendingOrders);
+
+
+
+// ====================
+// forEach()
+// ====================
+
+pendingOrders.forEach(function(order) {
+  console.log(
+    "Order " +
+    order.id +
+    " (" +
+    order.product +
+    ") is still pending - $" +
+    order.price
+  );
+});
